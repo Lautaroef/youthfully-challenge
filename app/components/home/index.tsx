@@ -55,10 +55,15 @@ function index({ images }: Props) {
   const params = useSearchParams();
   const paramsEntries = Array.from(params.entries());
   const [filteredImages, setFilteredImages] = useState<IGalleryImage[]>(images);
-  const [showViral, setShowViral] = useState<boolean>(params.get("showViral") === "true");
-  const [section, setSection] = useState<SectionsType>(params.get("section") as SectionsType);
-  const [sort, setSort] = useState<SortType>(params.get("sort") as SortType);
-  const [window, setWindow] = useState<WindowType>(params.get("window") as WindowType);
+  const [showViral, setShowViral] =
+    useState<boolean>(params.get("showViral") === "true") || true;
+  const [section, setSection] = useState<SectionsType>(
+    (params.get("section") as SectionsType) || "top"
+  );
+  const [sort, setSort] = useState<SortType>((params.get("sort") as SortType) || "top");
+  const [window, setWindow] = useState<WindowType>(
+    (params.get("window") as WindowType) || "all"
+  );
   const router = useRouter();
   const { classes } = useStyles();
 
@@ -73,6 +78,8 @@ function index({ images }: Props) {
     const images = data.data as IGalleryImage[];
     setFilteredImages(images);
   };
+
+  console.log(filteredImages);
 
   return (
     <main className="main home-page">
@@ -92,7 +99,7 @@ function index({ images }: Props) {
         <FiltersApplied paramsEntries={paramsEntries} inter={inter} />
       )}
       <div className="gallery-images">
-        {filteredImages.length === 0
+        {filteredImages.length === 0 || !filteredImages
           ? Array.from({ length: 6 }).map((_, index) => (
               <Skeleton key={index} height={300} width={300} />
             ))
