@@ -1,0 +1,140 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1050px;
+  min-height: 100vh;
+
+  margin: auto;
+  // padding: 1rem 2rem;
+
+  .filter-section {
+    width: 100%;
+
+    .inline-inputs {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      width: 100%;
+      margin-top: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .select-input {
+      flex: 1;
+    }
+  }
+
+  .filters-applied-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .filters-applied-title {
+      min-width: max-content;
+      margin-right: 0.5rem;
+    }
+    .filters-applied-badges {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+
+  .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    flex: 1;
+    max-width: 100%;
+
+    .gallery-image {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      text-overflow: ellipsis;
+      max-width: 300px;
+      row-gap: 0.25rem;
+      margin-bottom: 1rem;
+
+      a {
+        max-height: 300px;
+      }
+
+      video,
+      img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: $--border-radius-sm;
+      }
+
+      .spoiler {
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.single-image-page {
+  position: relative;
+  .image-box {
+    margin-block: 1rem;
+    border: 2px solid $--gray;
+
+    .image-id {
+      width: 100%;
+      padding: 0.5rem;
+      padding-left: 0.75rem;
+      text-align: left;
+      background-color: $--gray;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+
+      img,
+      video {
+        min-width: 100% !important;
+        max-height: 700px;
+
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    .image-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 20vh;
+      margin-top: 1rem;
+    }
+  }
+}
