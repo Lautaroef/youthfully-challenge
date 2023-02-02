@@ -1,4 +1,6 @@
 # Youthfully coding challenge - Made by Lautaro Figueroa
+Full-Stack development | Imgur API Version 3
+
 
 ## Technical requirements
 
