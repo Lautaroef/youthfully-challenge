@@ -74,8 +74,6 @@ function index({ images }: Props) {
     setFilteredImages(images);
   };
 
-  console.log(filteredImages);
-
   return (
     <main className="main home-page">
       <Filters
