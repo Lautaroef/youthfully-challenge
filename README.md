@@ -1,4 +1,13 @@
 # Youthfully coding challenge - Made by Lautaro Figueroa
+Full-Stack development | Imgur API Version 3
+
+1. [Technical requirements](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#technical-requirements)
+2. [Solution - Step by steps](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#solution---step-by-steps)
+3. [Next.js - Applying the latest server-side and client-side features](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#nextjs---applying-the-latest-server-side-and-client-side-features)
+4. [Troubleshoots](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#troubleshoots)
+5. [Extras](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#extras)
+6. [Run the project](https://github.com/Lautaroef/youthfully-challenge/edit/main/README.md#run-the-project)
+
 
 ## Technical requirements
 
@@ -65,3 +74,12 @@ To solve it, I installed the cors library and used it for the `pages/api/get-sin
 In the filter section, whenever the user clicks the submit button, the call to the back-end is made and in addition, the **URL changes reflecting the filter values in the URL queries**.
 
 This feature was achieved using `useRouter` hook from the `next/router` package. This improves the user experience as it allows for easy sharing of a specific set of filtered images with others by simply sharing the URL.
+
+## Run the project
+To run this repository:
+`
+git clone https://github.com/Lautaroef/youthfully-challenge.git
+npm install
+npm run dev
+`
+Then open it on http://localhost:3000/
