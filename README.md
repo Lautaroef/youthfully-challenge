@@ -1,4 +1,4 @@
-# Youthfully coding challenge - Made by Lautaro Figueroa
+# Youthfully coding challenge
 Full-Stack development | Imgur API Version 3
 
 See online: https://youthfully-challenge-lautaro-figueroa.vercel.app/
